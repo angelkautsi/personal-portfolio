@@ -1,0 +1,237 @@
+/* ========================
+DESIGN FOUNDATION
+========================= */
+
+:root {
+    --cream: #F8F5EF;
+    --black: #1C1C1C;
+    --gold: #A88955;
+    --white: #FFFFFF;
+    --grey: #777777;
+}
+
+/* Remove deault browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--cream);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+/* =======================
+HEADER AND NAVIGATION
+======================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: var(--cream);
+    border-bottom: 1px solid rgba(168, 137, 85, 0.25);
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+/*================================================================
+HERO SECTION
+================================================================ */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 12%;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.intro-label {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 72px);
+    line-height: 1.15;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero h2 {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555555;
+    margin-bottom: 35px;
+}
+
+/*==========================
+HERO BUTTONS
+=========================== */
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 13px 25px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black );
+}
+
+.btn-primary:hover {
+    background-color: var(--gold);
+    color: var(--gold);
+}
+
+.btn-secondary {
+    color: var(--black);
+    border: 1px solid var(--gold);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold);
+    color: var(--white);
+}
+
+/*==========================
+FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid rgba(168, 137, 85, 0.25);
+    color: var(--grey);
+    font-size: 12px;
+}
+
+/*============================
+RESPONSIVE STYLING
+============================ */
+/* For tablets and smmaller screens */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 5%;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 60px 7%;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* mobile pones */
+@media screen and (max-width: 480px){
+    .logo {
+        font-size: 17px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+    
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+}
