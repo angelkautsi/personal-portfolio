@@ -509,7 +509,7 @@ PROJECTS PAGE
 
 
 /* =================================
-   9. ANIMATIONS PAGE
+ANIMATIONS PAGE
 ================================= */
 
 .animation-intro {
@@ -675,3 +675,27 @@ PROJECTS PAGE
         gap: 20px;
     }
 }
+
+
+/* SCROLL REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
