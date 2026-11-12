@@ -797,10 +797,11 @@ ANIMATIONS PAGE
 ================================= */
 
 .typing-text {
-    display: inline-block;
+    display: inline;
     border-right: 2px solid var(--gold);
     padding-right: 5px;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: break-word;
     animation: cursorBlink 0.8s steps(1) infinite;
 }
 
