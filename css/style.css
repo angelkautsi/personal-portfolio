@@ -450,6 +450,11 @@ PROJECTS PAGE
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.08);
 }
 
 .project-details {
