@@ -21,4 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 
+
+    // TYPEWRITER EFFECT
+
+    const typingElement = document.querySelector(".typing-text");
+
+    if (typingElement) {
+        const originalText = typingElement.textContent.trim();
+
+        typingElement.textContent = "";
+
+        let characterIndex = 0;
+
+        function typeText() {
+            if (characterIndex < originalText.length) {
+                typingElement.textContent += originalText.charAt(characterIndex);
+                characterIndex++;
+
+                setTimeout(typeText, 90);
+            }
+        }
+
+        typeText();
+    }
+
 });
